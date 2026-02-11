@@ -1,6 +1,10 @@
 "use client";
 
+import { ExperienceCard } from "@/components/ui/ExperienceCard";
 import PrimaryButton from "@/components/ui/PrimaryButton";
+import { ProjectCard } from "@/components/ui/ProjectsCard";
+import { experiences } from "@/data/experiences";
+import { projects } from "@/data/projects";
 import Image from "next/image";
 
 export default function MainPage() {
@@ -20,7 +24,7 @@ export default function MainPage() {
         </div>
       </header>
 
-      {/* MAIN CONTENT */}
+      {/* HERO SECTION */}
       <div className="px-12 py-20 flex justify-between items-center ">
         <div className="flex flex-col gap-5">
           <div className="w-fit text-body border-2 rounded-xl px-3 py-0.5 badge-available">
@@ -50,8 +54,9 @@ export default function MainPage() {
         </div>
       </div>
 
+      {/* ABOUT */}
       <div className="bg-secondary px-12 py-14 flex gap-12">
-        <div className="flex-1 gap-3">
+        <div className="flex-2 gap-3">
           <div className="mb-3.5">
             <div className="heading-3">The Journey</div>
             <div className="text-body">
@@ -59,7 +64,8 @@ export default function MainPage() {
               mission to solve real-world problems through creative
               technological solutions. I possess a versatile interest in
               Front-End, Back-End development, and Data science, constantly
-              seeking ways to build efficient and impactful applications. <br/><br />
+              seeking ways to build efficient and impactful applications. <br />
+              <br />
               Beyond technical expertise, I am committed to professional growth
               by refining my public speaking, team coordination, and research
               skills. I thrive in collaborative environments where technology
@@ -68,16 +74,52 @@ export default function MainPage() {
             </div>
           </div>
           <div>
-            <div className="heading-4">Tech Stack</div>
-            <div>tech stack badge</div>
+            <div className="heading-4 mb-2">Tech Stack</div>
+            <div className="flex gap-2">
+              <div className="w-fit text-body border-2 rounded-xl px-3 py-0.5 techstack-badge">
+                Python
+              </div>
+              <div className="w-fit text-body border-2 rounded-xl px-3 py-0.5 techstack-badge">
+                Next JS
+              </div>
+              <div className="w-fit text-body border-2 rounded-xl px-3 py-0.5 techstack-badge">
+                GoLang
+              </div>
+            </div>
           </div>
         </div>
         <div className="flex-1">
-          <div className="heading-3">Experience</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
-          <div>1</div>
+          <div className="heading-3 mb-5">Experience</div>
+          {experiences.map((exp) => (
+            <ExperienceCard
+              title={exp.title}
+              comp={exp.comp}
+              key={exp.id}
+              desc={exp.desc}
+              image={exp.image}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="w-full bg-primary px-12 py-16 ">
+        <div className="heading-3">Featured Project</div>
+        <div className="text-body mb-2">
+          A selection of recent projects that combine technical complexity with
+          elegant aesthetics.
+        </div>
+        {/* Projects */}
+        <div className="flex gap-4">
+          {projects.map((pro) => (
+            <ProjectCard
+              key={pro.id}
+              title={pro.title}
+              desc={pro.shortDesc}
+              image={pro.image}
+              type={pro.role}
+              tech={pro.tech}
+            />
+          ))}
         </div>
       </div>
     </div>

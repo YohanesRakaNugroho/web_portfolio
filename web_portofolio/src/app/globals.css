@@ -12,7 +12,7 @@
   --fs-h1: 68px;
   --fs-h3: 30px;
   --fs-h4: 20px;
-  --fs-text: 15px;
+  --fs-text: 16px;
 
   /* Margin */
   --margin-1: 22px
@@ -73,7 +73,16 @@
   font-weight: 500;
   letter-spacing: 0.04em;
   backdrop-filter: blur(6px);
-}
+  }
+  .techstack-badge{
+    background: rgba(19, 127, 236, 0.12); /* biru transparan */
+  border: 1px solid rgba(19, 127, 236, 0.3);
+  color: var(--white);
+  font-size: var(--fs-text);
+  font-weight: 200;
+  letter-spacing: 0.04em;
+  backdrop-filter: blur(6px);
+  }
 
 }
 
