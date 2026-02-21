@@ -1,8 +1,11 @@
 "use client";
 
+import { AccountButton } from "@/components/ui/AccountButton";
 import { ExperienceCard } from "@/components/ui/ExperienceCard";
+import InformationSection from "@/components/ui/InformationSection";
 import PrimaryButton from "@/components/ui/PrimaryButton";
 import { ProjectCard } from "@/components/ui/ProjectsCard";
+import SecondaryButton from "@/components/ui/SecondaryButton";
 import { experiences } from "@/data/experiences";
 import { projects } from "@/data/projects";
 import Image from "next/image";
@@ -40,7 +43,7 @@ export default function MainPage() {
           </div>
           <div className="flex gap-3">
             <PrimaryButton className="btn-primary">View Work</PrimaryButton>
-            <PrimaryButton className="border-2 ">About Me</PrimaryButton>
+            <SecondaryButton className="border-2 ">About Me</SecondaryButton>
           </div>
         </div>
         <div className="overflow-hidden rounded-xl ">
@@ -102,9 +105,10 @@ export default function MainPage() {
         </div>
       </div>
 
+      {/* Projects */}
       <div className="w-full bg-primary px-12 py-16 ">
-        <div className="heading-3">Featured Project</div>
-        <div className="text-body mb-2">
+        <div className="heading-2">Featured Project</div>
+        <div className="text-body mb-9">
           A selection of recent projects that combine technical complexity with
           elegant aesthetics.
         </div>
@@ -121,6 +125,50 @@ export default function MainPage() {
             />
           ))}
         </div>
+      </div>
+
+      {/* Footer */}
+      <div className="w-full bg-secondary px-12 py-14 flex gap-12">
+        <div className="flex-none">
+          <div className="heading-2 mb-9">
+            Let's build <br />
+            <div className="blue">together</div>
+          </div>
+          <div className="text-body mb-5 w-2xl">
+            I'm currently looking for new oppertunities and collaborations. Have
+            an idea? Let's discuss it
+          </div>
+          <div>
+            <InformationSection
+              icon={"/images/gdgoc.png"}
+              title={"EMAIL"}
+              info={"yohanesraka05@gmail.com"}
+            />
+            <InformationSection
+              icon={"/images/gdgoc.png"}
+              title={"LOCATION"}
+              info={"Depok, Jawa Barat"}
+            />
+          </div>
+          <div className="flex">
+            <AccountButton
+              icon="/images/linkedin.png"
+              link="https://www.linkedin.com/in/yohanesrakanugroho"
+              textAlt="linkedin"
+            />
+            <AccountButton
+              icon="/images/github.png"
+              link="https://github.com/YohanesRakaNugroho"
+              textAlt="github"
+            />
+            <AccountButton
+              icon="/images/instagram.png"
+              link="https://www.instagram.com/yoran.ins"
+              textAlt="instagram"
+            />
+          </div>
+        </div>
+        <div className="flex-1">Form</div>
       </div>
     </div>
   );

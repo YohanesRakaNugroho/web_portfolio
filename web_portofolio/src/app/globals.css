@@ -10,9 +10,10 @@
 
   /* Font Size */
   --fs-h1: 68px;
+  --fs-h2: 50px;
   --fs-h3: 30px;
   --fs-h4: 20px;
-  --fs-text: 16px;
+  --fs-text: 20px;
 
   /* Margin */
   --margin-1: 22px
@@ -40,6 +41,12 @@
 
   .heading-1{
     font-size: var(--fs-h1);
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .heading-2{
+    font-size: var(--fs-h2);
     font-weight: 700;
     line-height: 1;
   }
