@@ -5,7 +5,7 @@ export const projects = [
     role: "Front End",
     shortDesc: "Simple and Personal Financial Sheet",
     longDesc: "blablabla",
-    tech: ["React JS"],
+    tech: ["React JS", "CSS"],
     image: "/images/fine-sheet.png",
     vid: "blabla",
     link: "https://fine-sheet-react-ver.vercel.app/",
@@ -20,7 +20,7 @@ export const projects = [
     tech: ["Python", "Streamlit"],
     image: "/images/gdgoc.png",
     vid: "blabla",
-    link: "httlaskl;kajds",
+    link: "https://gdgocdashboard.streamlit.app/",
     action: "View on Web",
   },
   {
