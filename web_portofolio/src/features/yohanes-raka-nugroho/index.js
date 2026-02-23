@@ -16,12 +16,20 @@ export default function MainPage() {
     <div className="bg-primary min-h-screen text-primary">
       <header className="w-full border-b border-white/10">
         <div className="mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
-          <div className="font-semibold text-[25px]">Yohans</div>
+          <div className="font-black text-[45px] tracking-tight">
+            Yohan<span style={{ color: "#FF4433" }}>.</span>
+          </div>
           <nav className="flex gap-3 md:gap-6 items-center">
-            <button className="hidden sm:block">Work</button>
-            <button className="hidden sm:block">About</button>
-            <button className="hidden sm:block">Experience</button>
-            <PrimaryButton className="btn-primary">Hire Me</PrimaryButton>
+            <PrimaryButton
+              onClick={() =>
+                document
+                  .getElementById("hire")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+              className="btn-primary"
+            >
+              Hire Me
+            </PrimaryButton>
           </nav>
         </div>
       </header>
@@ -42,13 +50,21 @@ export default function MainPage() {
           <div className="flex gap-3">
             <PrimaryButton
               className="btn-primary"
-              onClick={() => document.getElementById("work").scrollIntoView({ behavior: "smooth" })}
+              onClick={() =>
+                document
+                  .getElementById("work")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
             >
               View Work
             </PrimaryButton>
             <SecondaryButton
               className="border-2"
-              onClick={() => document.getElementById("about").scrollIntoView({ behavior: "smooth" })}
+              onClick={() =>
+                document
+                  .getElementById("about")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
             >
               About Me
             </SecondaryButton>
@@ -65,7 +81,10 @@ export default function MainPage() {
         </div>
       </div>
 
-      <div id="about" className="bg-secondary px-6 md:px-12 py-14 flex flex-col md:flex-row gap-12">
+      <div
+        id="about"
+        className="bg-secondary px-6 md:px-12 py-14 flex flex-col md:flex-row gap-12"
+      >
         <div className="flex-2 gap-3">
           <div className="mb-10">
             <div className="heading-3">The Journey</div>
@@ -86,9 +105,15 @@ export default function MainPage() {
           <div>
             <div className="heading-4 mb-2">Tech Stack</div>
             <div className="flex flex-wrap gap-2">
-              <div className="w-fit text-body border-2 rounded-xl px-3 py-0.5 techstack-badge">Python</div>
-              <div className="w-fit text-body border-2 rounded-xl px-3 py-0.5 techstack-badge">Next JS</div>
-              <div className="w-fit text-body border-2 rounded-xl px-3 py-0.5 techstack-badge">React JS</div>
+              <div className="w-fit text-body border-2 rounded-xl px-3 py-0.5 techstack-badge">
+                Python
+              </div>
+              <div className="w-fit text-body border-2 rounded-xl px-3 py-0.5 techstack-badge">
+                Next JS
+              </div>
+              <div className="w-fit text-body border-2 rounded-xl px-3 py-0.5 techstack-badge">
+                React JS
+              </div>
             </div>
           </div>
         </div>
@@ -120,7 +145,10 @@ export default function MainPage() {
               </div>
               <div className="flex flex-wrap gap-2">
                 {skillGroup.items.map((item) => (
-                  <div key={item} className="w-fit text-body border-2 rounded-xl px-3 py-0.5 techstack-badge">
+                  <div
+                    key={item}
+                    className="w-fit text-body border-2 rounded-xl px-3 py-0.5 techstack-badge"
+                  >
                     {item}
                   </div>
                 ))}
@@ -152,7 +180,10 @@ export default function MainPage() {
         </div>
       </div>
 
-      <div className="w-full bg-primary px-6 md:px-12 py-14 flex flex-col items-center text-center">
+      <div
+        id="hire"
+        className="w-full bg-primary px-6 md:px-12 py-14 flex flex-col items-center text-center"
+      >
         <div className="heading-2 mb-4">
           Let's build <span className="blue">together.</span>
         </div>
@@ -171,10 +202,19 @@ export default function MainPage() {
             }}
           >
             <div className="bg-secondary group-hover:bg-primary p-4 rounded-xl transition-all duration-300">
-              <Image src="/images/communication.png" alt="email" width={24} height={24} />
+              <Image
+                src="/images/communication.png"
+                alt="email"
+                width={24}
+                height={24}
+              />
             </div>
-            <div className="text-body text-xs tracking-widest opacity-60">EMAIL ME AT</div>
-            <div className="text-body font-semibold">yohanesraka05@gmail.com</div>
+            <div className="text-body text-xs tracking-widest opacity-60">
+              EMAIL ME AT
+            </div>
+            <div className="text-body font-semibold">
+              yohanesraka05@gmail.com
+            </div>
           </a>
 
           <a
@@ -183,17 +223,36 @@ export default function MainPage() {
             className="group flex flex-col items-center gap-3 border-2 border-transparent hover:border-white/20 hover:bg-secondary px-6 py-4 rounded-xl transition-all duration-300"
           >
             <div className="bg-secondary group-hover:bg-primary p-4 rounded-xl transition-all duration-300">
-              <Image src="/images/google-maps.png" alt="location" width={24} height={24} />
+              <Image
+                src="/images/google-maps.png"
+                alt="location"
+                width={24}
+                height={24}
+              />
             </div>
-            <div className="text-body text-xs tracking-widest opacity-60">LOCATION</div>
+            <div className="text-body text-xs tracking-widest opacity-60">
+              LOCATION
+            </div>
             <div className="text-body font-semibold">Depok, Jawa Barat</div>
           </a>
         </div>
 
         <div className="flex gap-3 mb-16">
-          <AccountButton icon="/images/linkedin.png" link="https://www.linkedin.com/in/yohanesrakanugroho" textAlt="linkedin" />
-          <AccountButton icon="/images/github.png" link="https://github.com/YohanesRakaNugroho" textAlt="github" />
-          <AccountButton icon="/images/instagram.png" link="https://www.instagram.com/yoran.ins" textAlt="instagram" />
+          <AccountButton
+            icon="/images/linkedin.png"
+            link="https://www.linkedin.com/in/yohanesrakanugroho"
+            textAlt="linkedin"
+          />
+          <AccountButton
+            icon="/images/github.png"
+            link="https://github.com/YohanesRakaNugroho"
+            textAlt="github"
+          />
+          <AccountButton
+            icon="/images/instagram.png"
+            link="https://www.instagram.com/yoran.ins"
+            textAlt="instagram"
+          />
         </div>
 
         <div className="w-full border-t border-white/10 pt-6 flex justify-center text-body text-sm opacity-50">

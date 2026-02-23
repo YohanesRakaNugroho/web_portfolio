@@ -18,7 +18,7 @@ export const projects = [
     shortDesc: "Creating an interactive and informative dashboard",
     longDesc: "blablabla",
     tech: ["Python", "Streamlit"],
-    image: "/images/gdgoc.png",
+    image: "/images/dashboard.png",
     vid: "blabla",
     link: "https://gdgocdashboard.streamlit.app/",
     action: "View on Web",
@@ -27,7 +27,8 @@ export const projects = [
     id: 3,
     title: "Teacher Management Dashboard",
     role: "Web Development ",
-    shortDesc: "The interactive dashboard is used for teachers and lecturers who want to analyze student grades.",
+    shortDesc:
+      "The interactive dashboard is used for teachers and lecturers who want to analyze student grades.",
     longDesc: "blablabla",
     tech: ["Python", "Streamlit"],
     image: "/images/score-manager.png",
