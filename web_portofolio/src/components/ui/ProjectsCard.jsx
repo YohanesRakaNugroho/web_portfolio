@@ -1,5 +1,4 @@
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardAction,
@@ -10,15 +9,15 @@ import {
 } from "@/components/ui/card";
 import PrimaryButton from "./PrimaryButton";
 import { TechBadge } from "./TechBadge";
+import Link from "next/link";
 
-export function ProjectCard({ title, desc, type, image, tech, ...props }) {
+export function ProjectCard({ link, action, title, desc, type, image, tech, ...props }) {
   return (
-    <Card className="relative w-full max-w-sm pt-0 ">
-      {/* <div className="absolute inset-0 z-30 aspect-video bg-black/35" /> */}
+    <Card className="relative w-full sm:w-[calc(50%-8px)] lg:max-w-sm pt-0">
       <img
         src={image}
         alt="Event cover"
-        className="relative h-40 w-full object-cover brightness-60  dark:brightness-90 rounded-t-xl"
+        className="relative h-40 w-full object-cover brightness-60 dark:brightness-90 rounded-t-xl"
       />
       <CardHeader>
         <CardAction>
@@ -29,8 +28,7 @@ export function ProjectCard({ title, desc, type, image, tech, ...props }) {
         <CardTitle className="heading-4">{title}</CardTitle>
         <CardDescription>
           <div className="text-body mb-2.5">{desc}</div>
-
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             {tech.map((item, index) => (
               <TechBadge key={index}>{item}</TechBadge>
             ))}
@@ -38,7 +36,9 @@ export function ProjectCard({ title, desc, type, image, tech, ...props }) {
         </CardDescription>
       </CardHeader>
       <CardFooter>
-        <PrimaryButton>View Detail</PrimaryButton>
+        <a href={link} target="_blank" rel="noopener noreferrer" className="flex-1">
+          <PrimaryButton className="w-full">{action}</PrimaryButton>
+        </a>
       </CardFooter>
     </Card>
   );

@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* Root: set a token */
 :root {
   --background-primary: #101922;
   --background-secondary: #1C242D;
@@ -8,59 +7,76 @@
   --blue: #137FEC;
   --gray: #727E8F;
 
-  /* Font Size */
-  --fs-h1: 68px;
-  --fs-h2: 50px;
-  --fs-h3: 30px;
-  --fs-h4: 20px;
-  --fs-text: 20px;
+  --fs-h1: 40px;
+  --fs-h2: 32px;
+  --fs-h3: 22px;
+  --fs-h4: 18px;
+  --fs-text: 16px;
 
-  /* Margin */
-  --margin-1: 22px
-  --margin-2: 52px
+  --margin-1: 22px;
+  --margin-2: 52px;
 }
 
-/* Layer Semantic: combine the token into a  */
+@media (min-width: 768px) {
+  :root {
+    --fs-h1: 56px;
+    --fs-h2: 42px;
+    --fs-h3: 26px;
+    --fs-h4: 20px;
+    --fs-text: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --fs-h1: 68px;
+    --fs-h2: 50px;
+    --fs-h3: 30px;
+    --fs-h4: 20px;
+    --fs-text: 20px;
+  }
+}
+
 @layer components {
-  /* Backgrounds */
   .bg-primary {
     background-color: var(--background-primary);
   }
 
-  .bg-secondary{
+  .bg-secondary {
     background-color: var(--background-secondary);
   }
 
-  .text-primary{
+  .text-primary {
     color: var(--white);
   }
 
-  .blue{
+  .blue {
     color: var(--blue);
   }
 
-  .heading-1{
+  .heading-1 {
     font-size: var(--fs-h1);
     font-weight: 700;
     line-height: 1;
   }
 
-  .heading-2{
+  .heading-2 {
     font-size: var(--fs-h2);
     font-weight: 700;
     line-height: 1;
   }
 
-  .heading-3{
+  .heading-3 {
     font-size: var(--fs-h3);
     font-weight: 500;
   }
-  .heading-4{
+
+  .heading-4 {
     font-size: var(--fs-h4);
     font-weight: 500;
   }
 
-  .text-body{
+  .text-body {
     font-size: var(--fs-text);
     font-weight: 200;
   }
@@ -70,27 +86,27 @@
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-  } 
+  }
 
   .badge-available {
-  background: rgba(19, 127, 236, 0.12); /* biru transparan */
-  border: 1px solid rgba(19, 127, 236, 0.3);
-  color: var(--blue);
-  font-size: var(--fs-text);
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  backdrop-filter: blur(6px);
-  }
-  .techstack-badge{
-    background: rgba(19, 127, 236, 0.12); /* biru transparan */
-  border: 1px solid rgba(19, 127, 236, 0.3);
-  color: var(--white);
-  font-size: var(--fs-text);
-  font-weight: 200;
-  letter-spacing: 0.04em;
-  backdrop-filter: blur(6px);
+    background: rgba(19, 127, 236, 0.12);
+    border: 1px solid rgba(19, 127, 236, 0.3);
+    color: var(--blue);
+    font-size: var(--fs-text);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    backdrop-filter: blur(6px);
   }
 
+  .techstack-badge {
+    background: rgba(19, 127, 236, 0.12);
+    border: 1px solid rgba(19, 127, 236, 0.3);
+    color: var(--white);
+    font-size: var(--fs-text);
+    font-weight: 200;
+    letter-spacing: 0.04em;
+    backdrop-filter: blur(6px);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
