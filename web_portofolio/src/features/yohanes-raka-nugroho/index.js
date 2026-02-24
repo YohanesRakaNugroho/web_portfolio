@@ -59,7 +59,7 @@ export default function MainPage() {
               View Work
             </PrimaryButton>
             <SecondaryButton
-              className="border-2"
+              className="border-2  bg-gray-800"
               onClick={() =>
                 document
                   .getElementById("about")
@@ -95,7 +95,7 @@ export default function MainPage() {
               Front-End, Back-End development, and Data science, constantly
               seeking ways to build efficient and impactful applications. <br />
               <br />
-              Beyond technical expertise, I am committed to professional growth
+              Beyond technical expertise, I committed to professional growth
               by refining my public speaking, team coordination, and research
               skills. I thrive in collaborative environments where technology
               meets communication, aiming to contribute meaningfully to the
@@ -103,7 +103,7 @@ export default function MainPage() {
             </div>
           </div>
           <div>
-            <div className="heading-4 mb-2">Tech Stack</div>
+            <div className="heading-3 mb-2">Tech Stack</div>
             <div className="flex flex-wrap gap-2">
               <div className="w-fit text-body border-2 rounded-xl px-3 py-0.5 techstack-badge">
                 Python
