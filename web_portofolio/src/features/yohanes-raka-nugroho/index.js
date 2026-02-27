@@ -95,8 +95,8 @@ export default function MainPage() {
               Front-End, Back-End development, and Data science, constantly
               seeking ways to build efficient and impactful applications. <br />
               <br />
-              Beyond technical expertise, I committed to professional growth
-              by refining my public speaking, team coordination, and research
+              Beyond technical expertise, I committed to professional growth by
+              refining my public speaking, team coordination, and research
               skills. I thrive in collaborative environments where technology
               meets communication, aiming to contribute meaningfully to the
               digital landscape while continuously expanding my horizons.
@@ -245,7 +245,7 @@ export default function MainPage() {
           />
           <AccountButton
             icon="/images/github.png"
-            link="https://github.com/YohanesRakaNugroho"
+            link="https://github.com/YohanesRakaN"
             textAlt="github"
           />
           <AccountButton
